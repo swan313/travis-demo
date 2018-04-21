@@ -1,0 +1,23 @@
+{
+  "name": "travis-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swan313/travis-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swan313/travis-demo/issues"
+  },
+  "homepage": "https://github.com/swan313/travis-demo#readme",
+  "dependencies": {
+    "koa": "^2.5.0"
+  }
+}
