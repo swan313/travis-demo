@@ -1,0 +1,12 @@
+User root
+Host swan
+HostName 39.105.6.124
+Port 54322
+StrictHostKeyChecking no
+IdentityFile ~/.ssh/swan_rsa
+IdentitiesOnly yes
+Protocol 2
+Compression yes
+ServerAliveInterval 60
+ServerAliveCountMax 20
+LogLevel INFO
