@@ -4,13 +4,11 @@ node_js:
 after_script:
 - scp -o StrictHostKeyChecking=no ./app.js 39.105.6.124:/root/travisdemo
 before_install:
+- npm run dev
 - openssl aes-256-cbc -K $encrypted_5bab094fce26_key -iv $encrypted_5bab094fce26_iv
   -in swan_rsa.enc -out ~\/.ssh/swan_rsa -d
-- npm run dev
-- openssl aes-256-cbc -K $encrypted_e3340b7988a5_key -iv $encrypted_e3340b7988a5_iv
-  -in id_rsa.enc -out id_rsa -d
-- mv id_rsa ~/.ssh -f
-- chmod 600 ~/.ssh/id_rsa
+- mv swan_rsa ~/.ssh -f
+- chmod 600 ~/.ssh/swan_rsa
 - eval $(ssh-agent)
-- ssh-add ~/.ssh/id_rsa
+- ssh-add ~/.ssh/swan_rsa
 - cp .travis/ssh_config ~/.ssh/config
